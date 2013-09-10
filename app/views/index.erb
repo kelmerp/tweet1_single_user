@@ -1,18 +1,27 @@
-<div class="container">
- <!--  <h1>Whatchu wanna tweet, sucka?</h1>
+<img src="images.jpeg">
+<div class="tweet">
+  <h1>Whatchu wanna tweet, sucka?</h1>
   <form action="/tweet" method="POST">
-  <label>Type twitter handle here<input type="text" name="handle"></label>
-  <label>Type tweet here<input type="text" name="tweet" ></label>
-  <input type="submit" value="Tweet this!">
+  <!-- <label>Type twitter handle here<input type="text" name="handle"></label> -->
+  <label>Type tweet here<input class="tweet-input" type="text" name="tweet" ></label>
+  <input class="tweet-button" type="submit" value="Tweet this!">
   </form>
- -->
+  <% if @error %>
+    <p class="error">
+      <%= @error %>
+    </p>
+    <% elsif @message %>
+    <p class="message">
+      <%= @message %>
+    </p>
+  <% end %>
 
-    <h1>Who you lookin' at, sucka?</h1>
+<!--     <h1>Who you lookin' at, sucka?</h1>
   <form action="/find_user" method="POST">
   <label>Type twitter handle here<input type="text" name="handle"></label>
   <input type="submit" value="Find sucka!">
   </form>
-</div>
+</div> -->
 
 <!-- 
 There should be two types of URLs: the index page with a URL field to enter a Twitter username and a URL to display the most recent tweets of a particular username.
